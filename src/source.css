@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 227, 24, 55;
+  --yellow: 239, 187, 64;
+  --light: 255, 255, 255;
+  --dark: 0, 0, 0;
+}
+
+@layer base {
+  body {
+    @apply text-dark leading-snug font-nunito;
+  }
+
+  a {
+    @apply text-dark no-underline;
+  }
+
+  ul {
+    @apply list-none;
+  }
+
+  img {
+    @apply block;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  h2 {
+    @apply text-[clamp(20px,8vw,48px)] mb-5 font-extrabold leading-tight;
+  }
+
+  h3 {
+    @apply text-[clamp(18px,8vw,28px)] mb-5 font-extrabold leading-tight;
+  }
+
+  h6 {
+    @apply font-extrabold  mb-2;
+  }
+
+  .input-wrap label {
+    @apply block mb-1 uppercase font-extrabold;
+  }
+
+  .input-wrap input {
+    @apply py-2.5 px-6 rounded-md border-none outline-none text-dark w-full;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1250px] mx-auto px-4 w-full;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded-[40px] font-extrabold uppercase inline-block;
+  }
+}
