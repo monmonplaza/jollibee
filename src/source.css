@@ -9,6 +9,7 @@
   --yellow: 239, 187, 64;
   --light: 255, 255, 255;
   --dark: 0, 0, 0;
+  --blue: 242, 249, 253;
 }
 
 @layer base {
@@ -40,6 +41,10 @@
     @apply text-[clamp(18px,8vw,28px)] mb-5 font-extrabold leading-tight;
   }
 
+  h5 {
+    @apply font-extrabold  mb-2;
+  }
+
   h6 {
     @apply font-extrabold  mb-2;
   }
@@ -50,6 +55,13 @@
 
   .input-wrap input {
     @apply py-2.5 px-6 rounded-md border-none outline-none text-dark w-full;
+  }
+
+  .accordion .question.active {
+    @apply rounded-b-none;
+  }
+  .accordion .question.active + .answer {
+    @apply block;
   }
 }
 
